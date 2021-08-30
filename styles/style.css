@@ -1,0 +1,221 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+/* 500, 700 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colors */
+:root {
+  --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --desaturatedDarkBlue: hsl(214, 17%, 51%);
+  --grayishBlue: hsl(212, 23%, 69%);
+  --lightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+body {
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  background-color: var(--lightGrayishBlue);
+}
+
+.card {
+  margin: 10rem auto;
+  display: flex;
+  justify-content: center;
+  width: 70rem;
+  height: 20rem;
+  border-radius: 50%;
+}
+
+.card-img {
+  width: 25rem;
+  height: 20rem;
+  object-fit: cover;
+  object-position: 5rem;
+}
+
+.card__content {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 2rem 3rem 2rem 3rem;
+  width: 30rem;
+}
+
+.card__content-heading {
+  font-size: 1.4rem;
+  color: var(--veryDarkGrayishBlue);
+  line-height: 1.5;
+}
+
+.card__content-paragraph {
+  color: var(--desaturatedDarkBlue);
+  letter-spacing: 0.4px;
+  line-height: 1.7;
+}
+
+.card__content-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 0.8rem;
+}
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-avatar {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+.profile-text {
+  margin-left: 1rem;
+}
+
+.profile-heading {
+  font-size: 0.9rem;
+  letter-spacing: 0.2px;
+  color: var(--veryDarkGrayishBlue);
+}
+
+.profile-paragraph {
+  color: var(--grayishBlue);
+  font-weight: 500;
+}
+
+.share-icon {
+  width: 2rem;
+  height: 2rem;
+  background: var(--lightGrayishBlue);
+  border-radius: 50%;
+  text-align: center;
+}
+
+.share-icon svg {
+  padding: 0.6rem;
+  cursor: pointer;
+  overflow: visible;
+}
+.share-icon-style-js {
+  transition: fill 0.2s ease-in-out;
+}
+.share-icon {
+  transition: background 0.2s ease-in-out;
+}
+
+.share-tooltip {
+  background: var(--veryDarkGrayishBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  padding: 1rem 2.2rem;
+  border-radius: 1rem;
+  position: absolute;
+  top: 20.5rem;
+  right: 21.9rem;
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.share-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: var(--veryDarkGrayishBlue) transparent transparent transparent;
+}
+
+.share-heading {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: var(--grayishBlue);
+  margin-right: 1rem;
+}
+
+.share-icon-img {
+  display: flex;
+  align-items: center;
+}
+.share-icon-img a:nth-last-child(2) {
+  margin: 0 1rem;
+}
+
+@media (max-width: 375px) {
+  .card {
+    flex-direction: column;
+    width: 21rem;
+  }
+  .card-img {
+    width: 21rem;
+    height: 13rem;
+    object-fit: cover;
+    object-position: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .card__content {
+    width: 21rem;
+    padding: 2rem 2rem 1rem 2rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .card__content-heading {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+  }
+  .card__content-profile {
+    margin-top: 1.5rem;
+  }
+  .profile-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .profile-heading {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+  .share-tooltip {
+    background: var(--veryDarkGrayishBlue);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 21rem;
+    padding: 1.2rem 2.2rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    position: absolute;
+    top: 32.6rem;
+    right: 1.2rem;
+    /* opacity: 1; */
+    transition: opacity 0.2s ease-in-out;
+  }
+  .share-tooltip::after {
+    display: none;
+  }
+  .icon-svg {
+    padding: 0.6rem;
+    z-index: 99;
+    position: relative;
+    border-radius: 50%;
+    overflow: visible;
+  }
+}
